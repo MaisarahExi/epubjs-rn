@@ -6,7 +6,7 @@ process.env.EPUBJS = fs.readFileSync(path.resolve(__dirname, "node_modules/epubj
 process.env.BRIDGE = fs.readFileSync(path.resolve(__dirname, "src/bridge.js"), "utf8");
 
 module.exports = {
-  "presets": ["module:metro-react-native-babel-preset"],
+  "presets": ["module:@react-native/babel-preset"],
   "plugins": [
     ["module-resolver", {
       "alias": {

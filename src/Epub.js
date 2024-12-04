@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import { StyleSheet, Dimensions, AppState } from 'react-native';
 
-import Orientation from '@lightbase/react-native-orientation';
+import Orientation from 'react-native-orientation-locker';
 
-import RNFetchBlob from 'rn-fetch-blob';
+import RNFetchBlob from 'react-native-blob-util';
 
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -47,6 +47,8 @@ class Epub extends Component {
       width: bounds.width,
       height: bounds.height,
       orientation: 'PORTRAIT',
+      subscribeAppState: undefined,
+      subscribeOrientation: undefined
     };
 
     this.streamer = new Streamer();
@@ -55,11 +57,11 @@ class Epub extends Component {
   componentDidMount() {
     this.active = true;
     this._isMounted = true;
-    AppState.addEventListener('change', this._handleAppStateChange.bind(this));
+    this.state.subscribeAppState = AppState.addEventListener('change', this._handleAppStateChange.bind(this));
+    this.state.subscribeOrientation = Orientation.addOrientationListener(this._orientationDidChange);
 
-    Orientation.addSpecificOrientationListener(this._orientationDidChange.bind(this));
-    let orientation = Orientation.getInitialOrientation();
-    if (orientation && (orientation === 'PORTRAITUPSIDEDOWN' || orientation === 'UNKNOWN')) {
+    let orientation = Orientation.getOrientation();
+    if (orientation && (orientation === 'PORTRAIT_DOWN' || orientation === 'UNKNOWN')) {
       orientation = 'PORTRAIT';
       this.setState({ orientation });
     } else if (orientation) {
@@ -79,8 +81,8 @@ class Epub extends Component {
   componentWillUnmount() {
     this._isMounted = false;
 
-    AppState.removeEventListener('change', this._handleAppStateChange);
-    Orientation.removeSpecificOrientationListener(this._orientationDidChange);
+    this.state.subscribeAppState?.remove();
+    this.state.subscribeOrientation?.remove();
     clearTimeout(this.orientationTimeout);
 
     this.streamer.kill();
@@ -170,7 +172,7 @@ class Epub extends Component {
   }
 
   // LANDSCAPE PORTRAIT UNKNOWN PORTRAITUPSIDEDOWN
-  _orientationDidChange(orientation) {
+  _orientationDidChange = (orientation) => {
     let wait = 10;
     let _orientation = orientation;
 

@@ -1,6 +1,6 @@
 import StaticServer from 'react-native-static-server';
 
-import RNFetchBlob from 'rn-fetch-blob';
+import RNFetchBlob from 'react-native-blob-util';
 
 import { unzip } from 'react-native-zip-archive';
 
