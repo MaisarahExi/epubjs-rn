@@ -31,7 +31,7 @@
     "react-native-webview": "11.26.0",
     "react-native-zip-archive": "7.0.1",
     "regenerator-runtime": "^0.14.1",
-    "rn-fetch-blob-util": "0.19.11",
+    "react-native-blob-util": "0.19.11",
     "stream": "0.0.2",
     "stream-browserify": "2.0.2",
     "util": "0.12.3"
