@@ -6,7 +6,7 @@ import Orientation from 'react-native-orientation-locker';
 
 import RNFetchBlob from 'react-native-blob-util';
 
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const defaultContentInset = { top: 0, bottom: 32 };
 
