@@ -1601,6 +1601,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dr.pogodin/js-utils@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "@dr.pogodin/js-utils@npm:0.0.12"
+  checksum: 10c0/c05f8e813736d8005d50b67dde72b766ec5aa390d9341fe64e569ed5d2228d613c8c3eff60477f138fd497abfd6bd6705738148249c55e93cf823b0f0a7aa281
+  languageName: node
+  linkType: hard
+
 "@gulpjs/messages@npm:^1.1.0":
   version: 1.1.0
   resolution: "@gulpjs/messages@npm:1.1.0"
@@ -1814,7 +1821,7 @@ __metadata:
     react-native: "npm:0.74.5"
     react-native-blob-util: "npm:0.19.11"
     react-native-orientation-locker: "npm:1.7.0"
-    react-native-static-server: "npm:0.5.0"
+    react-native-static-server: "https://github.com/birdofpreyru/react-native-static-server"
     react-native-webview: "npm:11.26.0"
     react-native-zip-archive: "npm:7.0.1"
     regenerator-runtime: "npm:^0.14.1"
@@ -6385,13 +6392,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-static-server@npm:0.5.0":
-  version: 0.5.0
-  resolution: "react-native-static-server@npm:0.5.0"
+"react-native-static-server@https://github.com/birdofpreyru/react-native-static-server":
+  version: 0.18.0
+  resolution: "react-native-static-server@https://github.com/birdofpreyru/react-native-static-server.git#commit=254ad114ee117196be2f69ee68c6f23a8dbf4e62"
+  dependencies:
+    "@dr.pogodin/js-utils": "npm:^0.0.12"
   peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 10c0/546251d0d3d6b06ddf1b5387d78b4dd9ef063dc55fbd8f3b8d562e78e26feceb0cdbc18151cc3222e5ecf82b93c2175d3c7df32111ac7945585f92a6c31e3069
+    "@dr.pogodin/react-native-fs": ">= 2.22.0"
+    react: ^18.3.1
+    react-native: ^0.76.0
+    react-native-windows: ^0.75.6
+  checksum: 10c0/bcb61a1a154aab2635e754adcd33e4caf3b83dba6df3c0679a84c4cc67b88d6778ee8eaf207011eb7a1781475dce20bb904d224482a49e2fffe853e3d1359e2e
   languageName: node
   linkType: hard
 
