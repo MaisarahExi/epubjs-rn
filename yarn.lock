@@ -1608,6 +1608,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dr.pogodin/react-native-static-server@npm:0.15.2":
+  version: 0.15.2
+  resolution: "@dr.pogodin/react-native-static-server@npm:0.15.2"
+  dependencies:
+    "@dr.pogodin/js-utils": "npm:^0.0.12"
+  peerDependencies:
+    "@dr.pogodin/react-native-fs": ">= 2.22.0"
+    react: "*"
+    react-native: "*"
+    react-native-windows: "*"
+  checksum: 10c0/3c2e0dfcfbd350f5234ba3ac9edecf7f673cf91c8b46a50e487f62d75b6983a215f2d9edb83a3bb40e2fd84fed18f9642755e6c8e3aa8a2038891d82355e6762
+  languageName: node
+  linkType: hard
+
 "@gulpjs/messages@npm:^1.1.0":
   version: 1.1.0
   resolution: "@gulpjs/messages@npm:1.1.0"
@@ -1801,6 +1815,7 @@ __metadata:
     "@babel/core": "npm:7.24.4"
     "@babel/preset-env": "npm:7.24.4"
     "@babel/runtime": "npm:7.24.4"
+    "@dr.pogodin/react-native-static-server": "npm:0.15.2"
     "@react-native-async-storage/async-storage": "npm:2.1.0"
     "@react-native/babel-preset": "npm:0.74.87"
     babel-plugin-module-resolver: "npm:4.0.0"
@@ -1821,7 +1836,6 @@ __metadata:
     react-native: "npm:0.74.5"
     react-native-blob-util: "npm:0.19.11"
     react-native-orientation-locker: "npm:1.7.0"
-    react-native-static-server: "https://github.com/birdofpreyru/react-native-static-server"
     react-native-webview: "npm:11.26.0"
     react-native-zip-archive: "npm:7.0.1"
     regenerator-runtime: "npm:^0.14.1"
@@ -6389,20 +6403,6 @@ __metadata:
     react-native-windows:
       optional: true
   checksum: 10c0/68ac54460a0722c203cda17d8a26cf8409115e6ed1ecc4324c25b60f94476f6200ae6646fa71495288d553f3a77a20c5548d0d33b434066ef8d7284dbbd094ff
-  languageName: node
-  linkType: hard
-
-"react-native-static-server@https://github.com/birdofpreyru/react-native-static-server":
-  version: 0.18.0
-  resolution: "react-native-static-server@https://github.com/birdofpreyru/react-native-static-server.git#commit=254ad114ee117196be2f69ee68c6f23a8dbf4e62"
-  dependencies:
-    "@dr.pogodin/js-utils": "npm:^0.0.12"
-  peerDependencies:
-    "@dr.pogodin/react-native-fs": ">= 2.22.0"
-    react: ^18.3.1
-    react-native: ^0.76.0
-    react-native-windows: ^0.75.6
-  checksum: 10c0/bcb61a1a154aab2635e754adcd33e4caf3b83dba6df3c0679a84c4cc67b88d6778ee8eaf207011eb7a1781475dce20bb904d224482a49e2fffe853e3d1359e2e
   languageName: node
   linkType: hard
 
